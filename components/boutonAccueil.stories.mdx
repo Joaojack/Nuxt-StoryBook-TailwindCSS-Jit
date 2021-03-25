@@ -1,0 +1,42 @@
+import { Meta, Story, Canvas, ArgsTable } from '@storybook/addon-docs/blocks'
+import boutonAccueil from '../components/boutonAccueil.vue'
+
+<Meta
+  title="Bouton Accueil"
+  component={boutonAccueil}
+  argTypes={{
+    tailwindbg: { control: {type: 'text'}},
+    texte: { control: {type: 'text'}},
+  }}
+/>
+
+export const Template = (args, { argTypes }) => ({
+  props: Object.keys(argTypes),
+  components: {boutonAccueil},
+  template: '<boutonAccueil v-bind="$props" />',
+});
+
+# Bouton d'Accueil
+
+Un bouton simple avec configuration du **texte** et de la **background-color** en utility tailwind.
+
+<Canvas>
+  <Story name="Dark" args={{
+      tailwindbg: 'bg-purple-400',
+      texte: 'Awesome Button'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+  <Story name="Light" args={{
+      tailwindbg: 'bg-purple-200',
+      texte: 'Awesome Button'
+    }}
+  >
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+<ArgsTable of={boutonAccueil} />
+
+<!-- remainder story implementation -->

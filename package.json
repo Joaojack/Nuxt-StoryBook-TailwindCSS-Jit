@@ -1,0 +1,26 @@
+{
+  "name": "nuxtStorybook",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@storybook/addon-controls": "^6.1.21",
+    "@storybook/addon-docs": "^6.1.21",
+    "@tailwindcss/jit": "^0.1.8",
+    "core-js": "^3.6.5",
+    "nuxt": "^2.15.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/storybook": "^3.3.1",
+    "@nuxtjs/tailwindcss": "^4.0.2",
+    "@tailwindcss/postcss7-compat": "^2.0.4",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.4"
+  }
+}
